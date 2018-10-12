@@ -30,6 +30,23 @@ public class Testingmysqlconnection {
 			{
 				System.out.format(format,rs.getInt("id"),rs.getInt("account"));
 			}
+			rs.first();
+			System.out.println("first row");
+			System.out.format(format,rs.getInt("id"),rs.getInt("account"));
+			
+			rs.last();
+			System.out.println("last row");
+			System.out.format(format,rs.getInt("id"),rs.getInt("account"));
+			
+			rs.absolute(3);
+			System.out.println("third row");
+			System.out.format(format,rs.getInt("id"),rs.getInt("account"));
+			
+			rs.first();
+			rs.relative(2);
+			System.out.println("relative");
+			System.out.format(format,rs.getInt("id"),rs.getInt("account"));
+			
 			
 		}
 		catch (ClassNotFoundException e1) {
